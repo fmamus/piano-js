@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/style.css">
     <link rel="shortcut icon" href="/piano.png">
     <title>Piano-JS</title>
@@ -12,10 +13,13 @@
     <div class="container">
         <h1>Welcome to my Piano-JS website</h1>
         <p>Press the keys on your keyboard to play the piano</p>
-        <p style="margin-bottom: 2rem;">For info come <span id="info">here!</span></p>
+        <p style="margin-bottom: 2rem;">For info click <span id="info">here!</span></p>
         <div class="info">
-            <div class="img">
-                <img src="/keyboard.jpeg" alt="keyboard">
+            <div class="close-button">
+                <i id="close-button" class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="text">
+                <p>some text here</p>
             </div>
         </div>
         <div class="piano">

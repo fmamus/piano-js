@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Caveat', cursive;
+    font-family: 'Roboto', sans-serif;
 }
 
 body{
@@ -32,6 +32,7 @@ body{
 
 .container h1{
     font-size: 3rem;
+    letter-spacing: 2px;
 }
 
 .container p{
@@ -47,24 +48,40 @@ body{
 
 .info{
     background-color: #fff;
-    width: 20rem;
-    display: none;
+    width: 30rem;
+    height: 30rem;
+    visibility: hidden;
     padding: 1rem;
+    z-index: 4;
     border-radius: 50px;
-    opacity: .9;
+    opacity: 0;
     position: absolute;
-    bottom: 55%;
-    left: 60%;
-    transition: all .5s ease-in-out;
+    bottom: 30%;
+    left: 35%;
+    -webkit-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
 }
 
-.info .img{
+.info{
     margin: 0 auto;
-    width: 15rem;
+    width: 30rem;
+    -webkit-box-shadow: 0px 15px 35px 1px rgba(0,0,0,0.5); 
+    box-shadow: 0px 15px 35px 1px rgba(0,0,0,0.5);
 }
 
-.info .img img{
-    width: 15rem;
+.text p{
+    color: #000;
+}
+
+#close-button{
+    position: absolute;
+    font-size: 2rem;
+    right: 2.5rem;
+    cursor: pointer;
+}
+
+#close-button:hover{
+    opacity: .7;
 }
 
 .piano{

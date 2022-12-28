@@ -31,13 +31,20 @@ const blackKeys = document.querySelectorAll('.black-keys');
 blackKeys.forEach(blackKey => blackKey.addEventListener('transitionend', removeTransitionBlack));
 
 //show info
+
+const info = document.querySelector('.info');
 const infoText = document.querySelector('#info');
 
 infoText.addEventListener('click', function(){
-    const info = document.querySelector('.info');
-    if(info.style.display === 'none')
-    info.style.display = 'block';
-    else{
-        info.style.display = 'none';
-    }
+        info.style.visibility = 'visible';
+        info.style.opacity = '1';
+});
+
+//close info
+
+const closeButton = document.querySelector('#close-button');
+
+closeButton.addEventListener('click', function(){
+    info.style.visibility = 'hidden';
+    info.style.opacity = '0';
 });
