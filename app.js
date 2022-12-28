@@ -36,8 +36,8 @@ const info = document.querySelector('.info');
 const infoText = document.querySelector('#info');
 
 infoText.addEventListener('click', function(){
-        info.style.visibility = 'visible';
-        info.style.opacity = '1';
+        info.classList.add("open");
+        document.querySelector('.container').classList.add("open-info");
 });
 
 //close info
@@ -45,6 +45,15 @@ infoText.addEventListener('click', function(){
 const closeButton = document.querySelector('#close-button');
 
 closeButton.addEventListener('click', function(){
-    info.style.visibility = 'hidden';
-    info.style.opacity = '0';
+    info.classList.remove("open");
+    document.querySelector('.container').classList.remove("open-info");
+});
+
+window.addEventListener('click', function(e){
+    if(e.target == info){
+        info.classList.remove("open");
+        document.querySelector('.container').classList.remove("open-info");
+        console.log("first")
+        console.log(info.classList.contains("open"));
+    }
 });
